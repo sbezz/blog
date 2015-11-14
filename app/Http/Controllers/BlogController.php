@@ -9,79 +9,29 @@ use App\Http\Controllers\Controller;
 
 class BlogController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         //
+
+        return view('blog.index');
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function postagens()
     {
-        //
+
+        $postagens = [
+            0 => 'Postagem 01 - Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis.',
+            1 => 'Postagem 02 - Pra la, depois divoltis porris, paradis. Paisis, filhis, espiritis santis.',
+            2 => 'Postagem 03 - Manduma pindureta quium dia nois paga. ',
+            3 => 'Postagem 04 - Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.',
+            4 => 'Postagem 05 - Mussum ipsum cacilds, vidis litro abertis.'
+
+        ];
+
+        return view('blog.index', compact('postagens'));
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

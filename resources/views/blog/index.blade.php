@@ -1,9 +1,19 @@
 @extends('template')
 
 @section('title')
-    Olá!
+    Blog Sbezz
 @stop
 
 @section('content')
-    <h1>Olá! {{ $nome }} </h1>
+
+    <h1>Blog Sbezz</h1>
+
+    <br />
+    
+        @foreach($postagens as $postagen)
+
+            <p>{{ $postagen }}</p>
+            <br />
+        @endforeach
+
 @stop
