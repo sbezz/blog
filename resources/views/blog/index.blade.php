@@ -9,7 +9,7 @@
     <h1>Blog Sbezz</h1>
 
     <br />
-    
+
         @foreach($postagens as $postagen)
 
             <p>{{ $postagen }}</p>

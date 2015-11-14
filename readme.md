@@ -1,3 +1,9 @@
+## Repositorio Curso Laravel-Express
+
+Repositório criado para acompanhar as aulas do curso de Laravel Express - School of Net.
+
+nov/2015
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
