@@ -11,8 +11,12 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
-Route::get('blog', 'BlogController@postagens');
+/* Route::get('blog', 'BlogController@postagens');*/
+
+Route::get('/', 'BlogController@postagens');
