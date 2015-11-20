@@ -25,14 +25,12 @@ class Post extends Model
 
     public function getTagListAttribute($tags)
     {
-       // $tags->lists('name');
-        //$tags = $this->tags()->all();
-        $this->tags()->lists('name')->all();
+
+       $tags = $this->tags()->lists('name')->all();
 
         return implode(', ', $tags);
-        //return implode($tags, ', ');
     }
-    
+
     //or more correct
     /*
     public function getTagListAttribute()
