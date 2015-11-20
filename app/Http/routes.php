@@ -21,6 +21,25 @@ Route::get('/', function () {
 
 //Route::get('blog', 'PostsController@index');
 
+
+//Login
+Route::get('/auth', function()
+    {
+
+        if(Auth::attempt(['email'=>'bezz.sergio@gmail.com', 'password'=>1234]))
+        {
+            return "OK";
+        }
+
+        return "Falhou";
+    });
+
+Route::get('/auth/logout', function(){
+
+    Auth::logout();
+});
+
+
 //Home
 Route::get('/', 'PostsController@index');
 
