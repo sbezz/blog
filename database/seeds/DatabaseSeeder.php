@@ -8,6 +8,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Model::unguard();
+
+       factory('App\User')->create(
+           [
+            'name' => 'sergio',
+            'email' => 'bezz.sergio@gmail.com',
+            'password' => bcrypt(123456),
+            'remember_token' => str_random(10),
+            ]);
+
         DB::statement('SET foreign_key_checks = 0;');
 
         $this->call('PostsTableSeeder');

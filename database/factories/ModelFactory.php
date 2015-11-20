@@ -32,3 +32,5 @@ $factory->define(App\Tag::class, function (Faker\Generator $faker) {
         'name' => $faker->word
     ];
 });
+
+
