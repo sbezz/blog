@@ -17,6 +17,7 @@ Route::get('/', function () {
 });
 */
 
+<<<<<<< HEAD
 //Route::get('blog', 'BlogController@postagens');
 
 //Route::get('blog', 'PostsController@index');
@@ -35,3 +36,8 @@ Route::get('admin/posts/destroy/{id}', ['as' => 'admin.posts.destroy', 'uses' =>
 
 
 
+=======
+/* Route::get('blog', 'BlogController@postagens');*/
+
+Route::get('/', 'BlogController@postagens');
+>>>>>>> f392c5e2872ca5b1b41b6b0068a5ed952b48454d
