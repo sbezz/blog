@@ -23,7 +23,7 @@ class Post extends Model
         //return $this->belongsToMany(Tag::class);
     }
 
-    public function getTagListAtrribute($tags)
+    public function getTagListAttribute($tags)
     {
        // $tags->lists('name');
         //$tags = $this->tags()->all();
@@ -32,4 +32,19 @@ class Post extends Model
         return implode(', ', $tags);
         //return implode($tags, ', ');
     }
+    
+    //or more correct
+    /*
+    public function getTagListAttribute()
+    {
+        if($this->tags()->get()->toArray() != []){
+            foreach ($this->tags()->get()->toArray() as $key => $value) {
+                $array[$key] = $value['name'];
+            }
+            $tags = implode(',',$array);
+        }else{
+            $tags = '';
+        }
+        return $tags;
+    }*/
 }
